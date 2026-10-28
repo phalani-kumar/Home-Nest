@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookings | Home Nest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="account-layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="account-sidebar">
+      <a href="index.html" class="account-brand">
+        <span class="brand-mark">H</span>
+        <span>Home Nest</span>
+      </a>
+
+      <p class="sidebar-label">MY ACCOUNT</p>
+
+      <nav class="account-nav">
+        <a href="dashboard.html" class="account-nav-link">
+          <span>⌂</span> Dashboard
+        </a>
+
+        <a href="bookings.html" class="account-nav-link active" aria-current="page">
+          <span>▣</span> My Bookings
+        </a>
+
+        <a href="favourites.html" class="account-nav-link">
+          <span>♡</span> Favourites
+        </a>
+
+        <a href="profile.html" class="account-nav-link">
+          <span>♙</span> Profile
+        </a>
+
+        <a href="messages.html" class="account-nav-link">
+          <span>✉</span> Messages
+        </a>
+
+        <a href="settings.html" class="account-nav-link">
+          <span>⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="index.html" class="account-nav-link">
+          <span>←</span> Back to Home
+        </a>
+
+        <a href="login.html" class="account-nav-link">
+          <span>↪</span> Log Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="account-main">
+
+      <header class="account-page-header">
+        <div>
+          <p class="account-eyebrow">YOUR PROPERTY JOURNEY</p>
+          <h1>My Bookings</h1>
+          <p class="account-subtitle">
+            Manage your property visits and booking requests in one place.
+          </p>
+        </div>
+
+        <a href="properties.html" class="btn-signup">Explore Properties</a>
+      </header>
+
+      <!-- SUMMARY CARDS -->
+      <section class="booking-stats">
+        <article class="account-card booking-stat-card">
+          <p>Total Bookings</p>
+          <h2 id="totalBookings">0</h2>
+          <span>All your booking requests</span>
+        </article>
+
+        <article class="account-card booking-stat-card">
+          <p>Upcoming</p>
+          <h2 id="upcomingBookings">0</h2>
+          <span>Visits yet to happen</span>
+        </article>
+
+        <article class="account-card booking-stat-card">
+          <p>Completed</p>
+          <h2 id="completedBookings">0</h2>
+          <span>Completed property visits</span>
+        </article>
+      </section>
+
+      <!-- BOOKINGS LIST -->
+      <section class="account-card bookings-section">
+        <div class="bookings-heading">
+          <div>
+            <h2>Your Bookings</h2>
+            <p>Check the status of your property visit requests.</p>
+          </div>
+        </div>
+
+        <div class="booking-filter-tabs" role="group" aria-label="Filter bookings">
+          <button type="button" class="booking-filter-btn active" data-filter="all">
+            All
+          </button>
+          <button type="button" class="booking-filter-btn" data-filter="upcoming">
+            Upcoming
+          </button>
+          <button type="button" class="booking-filter-btn" data-filter="completed">
+            Completed
+          </button>
+          <button type="button" class="booking-filter-btn" data-filter="cancelled">
+            Cancelled
+          </button>
+        </div>
+
+        <div id="bookingList" class="booking-list">
+          <!-- Your existing script.js should render bookings here. -->
+        </div>
+
+        <div id="bookingsEmpty" class="bookings-empty" hidden>
+          <div class="bookings-empty-icon">⌂</div>
+          <h3>No bookings found</h3>
+          <p>
+            Your property visit requests will appear here when you make a booking.
+          </p>
+          <a href="properties.html" class="btn-signup">Browse Properties</a>
+        </div>
+      </section>
+
+      <footer class="account-page-footer">
+        <p>© <span id="currentYear"></span> Home Nest. Find a place to call home.</p>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>

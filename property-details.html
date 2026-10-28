@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | Home Nest</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="dashboard.html" class="logo" aria-label="Home Nest dashboard">
+      <span class="brand-icon">H</span>
+      <span>Home Nest</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a class="active" href="properties.html">Properties</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-outline btn-small" href="login.html">Login</a>
+      <a class="btn btn-primary btn-small" href="signup.html">Sign Up</a>
+    </div>
+  </header>
+
+  <main class="container detail-page">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="properties.html">Properties</a> / <span>Property Details</span></div>
+
+    <section class="detail-layout">
+      <div class="detail-main">
+        <div class="detail-hero-image">
+          <img id="detailImage" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=85" alt="Selected property">
+          <span class="property-badge" id="detailBadge">For Sale</span>
+        </div>
+
+        <div class="detail-title-row">
+          <div>
+            <p class="property-location" id="detailLocation">Jubilee Hills, Hyderabad</p>
+            <h1 id="detailName">Modern Garden Villa</h1>
+            <p class="muted-text" id="detailAddress">Hyderabad, Telangana, India</p>
+          </div>
+          <button class="btn btn-outline" id="detailFavorite" data-favorite="1" type="button">♡ Save</button>
+        </div>
+
+        <div class="detail-stats">
+          <div><span>Bedrooms</span><strong id="detailBeds">4</strong></div>
+          <div><span>Bathrooms</span><strong id="detailBaths">4</strong></div>
+          <div><span>Area</span><strong id="detailArea">3,200 sqft</strong></div>
+          <div><span>Property type</span><strong id="detailType">Villa</strong></div>
+        </div>
+
+        <section class="detail-section">
+          <span class="eyebrow">PROPERTY OVERVIEW</span>
+          <h2>Property summary</h2>
+          <p id="detailDescription">Discover a thoughtfully designed home with inviting interiors, comfortable living spaces, and room for the moments that matter. Explore the details and see whether this property is right for you.</p>
+        </section>
+
+        <section class="detail-section">
+          <span class="eyebrow">HOME HIGHLIGHTS</span>
+          <h2>Features and amenities</h2>
+          <div class="amenity-grid">
+            <div class="amenity-item"><span>✓</span> Spacious living room</div>
+            <div class="amenity-item"><span>✓</span> Modern kitchen</div>
+            <div class="amenity-item"><span>✓</span> Natural lighting</div>
+            <div class="amenity-item"><span>✓</span> Dedicated parking</div>
+            <div class="amenity-item"><span>✓</span> Secure community</div>
+            <div class="amenity-item"><span>✓</span> Convenient location</div>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <span class="eyebrow">LOCATION</span>
+          <h2>Explore the neighbourhood</h2>
+          <p id="detailNeighbourhood">Located in Hyderabad, with access to everyday conveniences and local amenities.</p>
+        </section>
+      </div>
+
+      <aside class="booking-card">
+        <span class="eyebrow">MAKE IT YOURS</span>
+        <p class="detail-price" id="detailPrice">₹3.8 Cr</p>
+        <p class="muted-text" id="detailPriceNote">Listed for sale</p>
+        <hr>
+        <h2>Book your property</h2>
+        <p>Interested in this home? Submit a request to record your booking in this demo.</p>
+
+        <form id="bookingForm">
+          <input type="hidden" id="bookingPropertyId" name="propertyId" value="1">
+
+          <div class="form-group">
+            <label for="bookingName">Full name</label>
+            <input id="bookingName" name="name" type="text" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingEmail">Email address</label>
+            <input id="bookingEmail" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingPhone">Mobile number</label>
+            <input id="bookingPhone" name="phone" type="tel" placeholder="Enter mobile number" pattern="[0-9+\-\s]{10,15}" required>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingDate">Preferred visit date</label>
+            <input id="bookingDate" name="date" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingGuests">Additional guests (optional)</label>
+            <select id="bookingGuests" name="guests">
+              <option value="0">No additional guests</option>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit">Submit Booking Request →</button>
+          <p class="form-note">Demo only. Your request is stored in this browser, not sent to a server.</p>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand brand-light" href="index.html"><span class="brand-icon">H</span> Home Nest</a><p>Thoughtful spaces. Better beginnings. Find a place that feels like home.</p></div>
+      <div><h3>Explore</h3><a href="index.html">Home</a><a href="properties.html">Properties</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div>
+      <div><h3>Your Account</h3><a href="login.html">Login</a><a href="signup.html">Sign Up</a><a href="dashboard.html">Dashboard</a><a href="bookings.html">My Bookings</a></div>
+      <div><h3>Get in Touch</h3><a href="mailto:hello@homenest.example">hello@homenest.example</a><p>Hyderabad, India</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear"></span> Home Nest. All rights reserved.</span><span>Made for finding your next home.</span></div>
+  </footer>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+</body>
+</html>

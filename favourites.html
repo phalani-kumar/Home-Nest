@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favourites | Home Nest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="account-dashboard-page">
+
+  <header class="dashboard-topbar">
+    <a href="dashboard.html" class="logo dashboard-brand">
+      <span class="logo-mark">H</span><span>Home Nest</span>
+    </a>
+    <div class="dashboard-top-actions">
+      <a href="index.html" class="dashboard-home-link">← Back to Home</a>
+      <button class="btn btn-outline btn-small" id="logoutButton" type="button">Log Out</button>
+    </div>
+  </header>
+
+  <div class="dashboard-shell">
+    <aside class="account-sidebar" id="accountSidebar">
+      <div class="sidebar-user">
+        <div class="user-avatar" id="sidebarAvatar">H</div>
+        <div>
+          <h3 id="sidebarUserName">Home Explorer</h3>
+          <p id="sidebarUserEmail">Your personal space</p>
+        </div>
+      </div>
+      <p class="sidebar-label">YOUR SPACE</p>
+      <nav class="account-nav" aria-label="Account navigation">
+        <a href="dashboard.html" class="account-nav-link"><span>▦</span> Dashboard</a>
+        <a href="bookings.html" class="account-nav-link"><span>▣</span> My Bookings</a>
+        <a href="favourites.html" class="account-nav-link active"><span>♡</span> Favourites</a>
+        <a href="profile.html" class="account-nav-link"><span>♙</span> Profile</a>
+        <a href="messages.html" class="account-nav-link"><span>✉</span> Messages <span class="nav-count" id="sidebarMessageCount">0</span></a>
+        <a href="settings.html" class="account-nav-link"><span>⚙</span> Settings</a>
+      </nav>
+      <div class="sidebar-help">
+        <span class="help-icon">⌂</span>
+        <h4>Still searching?</h4>
+        <p>Your next favourite could be waiting.</p>
+        <a href="properties.html">Explore properties →</a>
+      </div>
+      <a href="index.html" class="sidebar-home-link">← Return to website</a>
+    </aside>
+
+    <main class="account-main">
+      <div class="account-mobile-heading">
+        <button class="mobile-sidebar-toggle" id="accountMenuToggle" type="button" aria-label="Open account menu">☰</button>
+        <span>My Home Nest</span>
+      </div>
+
+      <section class="account-welcome reveal">
+        <div>
+          <p class="eyebrow">THE HOMES YOU LOVE</p>
+          <h1>My Favourites <span class="heading-heart">♡</span></h1>
+          <p>Your shortlist of homes worth another look.</p>
+        </div>
+        <a href="properties.html" class="btn btn-primary">Find More Homes ↗</a>
+      </section>
+
+      <section class="account-section reveal">
+        <div class="account-section-heading">
+          <div>
+            <p class="eyebrow">YOUR SHORTLIST</p>
+            <h2>Saved properties</h2>
+          </div>
+          <span class="subtle-count" id="favouritesPageCount">0 properties</span>
+        </div>
+
+        <div class="property-grid account-property-grid" id="favouritesGrid"></div>
+
+        <div class="account-empty-state hidden" id="favouritesEmpty">
+          <div class="empty-icon">♡</div>
+          <h3>No favourites just yet</h3>
+          <p>Tap the heart on any property to add it to your personal collection.</p>
+          <a href="properties.html" class="btn btn-primary">Browse Properties</a>
+        </div>
+      </section>
+
+      <footer class="account-footer">
+        <p>© <span id="currentYear"></span> Home Nest.</p>
+        <a href="index.html">Visit Home Nest</a>
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>

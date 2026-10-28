@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties | Home Nest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="dashboard.html" class="logo" aria-label="Home Nest dashboard">
+      <span class="brand-icon">H</span>
+      <span>Home Nest</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a class="active" href="properties.html">Properties</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-outline btn-small" href="login.html">Login</a>
+      <a class="btn btn-primary btn-small" href="signup.html">Sign Up</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero properties-hero">
+      <div class="page-hero-content container reveal">
+        <span class="eyebrow eyebrow-light">YOUR SEARCH STARTS HERE</span>
+        <h1>Find a place to<br><em>belong.</em></h1>
+        <p>Explore homes for sale and rent, all in one place.</p>
+      </div>
+    </section>
+
+    <section class="container listing-section">
+      <div class="section-heading listing-heading reveal">
+        <div>
+          <span class="eyebrow">THE COLLECTION</span>
+          <h2>Explore properties</h2>
+          <p>Find a home that matches your lifestyle and budget.</p>
+        </div>
+        <span class="results-label" id="resultsCount">Showing properties</span>
+      </div>
+
+      <form class="filter-panel reveal" id="propertyFilters">
+        <div class="filter-field">
+          <label for="filterLocation">Location</label>
+          <input id="filterLocation" type="search" placeholder="e.g. Hyderabad">
+        </div>
+        <div class="filter-field">
+          <label for="filterPurpose">Listing type</label>
+          <select id="filterPurpose">
+            <option value="all">Buy or rent</option>
+            <option value="buy">For sale</option>
+            <option value="rent">For rent</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filterType">Property type</label>
+          <select id="filterType">
+            <option value="all">All types</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+            <option value="House">Independent house</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filterBedrooms">Bedrooms</label>
+          <select id="filterBedrooms">
+            <option value="all">Any bedrooms</option>
+            <option value="2">2+ bedrooms</option>
+            <option value="3">3+ bedrooms</option>
+            <option value="4">4+ bedrooms</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filterPrice">Maximum price</label>
+          <select id="filterPrice">
+            <option value="all">Any price</option>
+            <option value="10000000">₹1 Cr</option>
+            <option value="20000000">₹2 Cr</option>
+            <option value="30000000">₹3 Cr</option>
+            <option value="40000000">₹4 Cr</option>
+          </select>
+        </div>
+        <button class="btn btn-primary filter-submit" type="submit">Apply Filters</button>
+        <button class="btn btn-outline filter-reset" type="reset" id="resetFilters">Reset</button>
+      </form>
+
+      <div class="property-grid listing-grid" id="propertyGrid">
+        <article class="property-card reveal" data-property-id="1">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85" alt="Modern garden villa">
+            <span class="property-badge">For Sale</span>
+            <button class="favorite-btn" data-favorite="1" aria-label="Save Modern Garden Villa">♡</button>
+          </div>
+          <div class="property-info">
+            <p class="property-location">Jubilee Hills, Hyderabad</p>
+            <h3>Modern Garden Villa</h3>
+            <p class="property-price">₹3.8 Cr</p>
+            <div class="property-meta"><span>🛏 4 Beds</span><span>▱ 4 Baths</span><span>⌂ 3,200 sqft</span></div>
+            <a class="btn btn-outline btn-block" href="property-details.html?id=1">View Details</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-property-id="2">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Skyline residence">
+            <span class="property-badge">For Sale</span>
+            <button class="favorite-btn" data-favorite="2" aria-label="Save The Skyline Residence">♡</button>
+          </div>
+          <div class="property-info">
+            <p class="property-location">Financial District, Hyderabad</p>
+            <h3>The Skyline Residence</h3>
+            <p class="property-price">₹1.45 Cr</p>
+            <div class="property-meta"><span>🛏 3 Beds</span><span>▱ 3 Baths</span><span>⌂ 2,100 sqft</span></div>
+            <a class="btn btn-outline btn-block" href="property-details.html?id=2">View Details</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-property-id="3">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Calm corner apartment">
+            <span class="property-badge badge-rent">For Rent</span>
+            <button class="favorite-btn" data-favorite="3" aria-label="Save Calm Corner Apartment">♡</button>
+          </div>
+          <div class="property-info">
+            <p class="property-location">Kondapur, Hyderabad</p>
+            <h3>Calm Corner Apartment</h3>
+            <p class="property-price">₹65,000 <small>/ month</small></p>
+            <div class="property-meta"><span>🛏 3 Beds</span><span>▱ 2 Baths</span><span>⌂ 1,650 sqft</span></div>
+            <a class="btn btn-outline btn-block" href="property-details.html?id=3">View Details</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-property-id="4">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Urban Nest home">
+            <span class="property-badge badge-rent">For Rent</span>
+            <button class="favorite-btn" data-favorite="4" aria-label="Save Urban Nest Home">♡</button>
+          </div>
+          <div class="property-info">
+            <p class="property-location">Madhapur, Hyderabad</p>
+            <h3>Urban Nest Home</h3>
+            <p class="property-price">₹42,000 <small>/ month</small></p>
+            <div class="property-meta"><span>🛏 2 Beds</span><span>▱ 2 Baths</span><span>⌂ 1,200 sqft</span></div>
+            <a class="btn btn-outline btn-block" href="property-details.html?id=4">View Details</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-property-id="5">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=85" alt="Willow family villa">
+            <span class="property-badge">For Sale</span>
+            <button class="favorite-btn" data-favorite="5" aria-label="Save Willow Family Villa">♡</button>
+          </div>
+          <div class="property-info">
+            <p class="property-location">Tellapur, Hyderabad</p>
+            <h3>Willow Family Villa</h3>
+            <p class="property-price">₹2.6 Cr</p>
+            <div class="property-meta"><span>🛏 4 Beds</span><span>▱ 4 Baths</span><span>⌂ 2,800 sqft</span></div>
+            <a class="btn btn-outline btn-block" href="property-details.html?id=5">View Details</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-property-id="6">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Amber apartment">
+            <span class="property-badge">For Sale</span>
+            <button class="favorite-btn" data-favorite="6" aria-label="Save The Amber Apartment">♡</button>
+          </div>
+          <div class="property-info">
+            <p class="property-location">Kokapet, Hyderabad</p>
+            <h3>The Amber Apartment</h3>
+            <p class="property-price">₹98 L</p>
+            <div class="property-meta"><span>🛏 2 Beds</span><span>▱ 2 Baths</span><span>⌂ 1,450 sqft</span></div>
+            <a class="btn btn-outline btn-block" href="property-details.html?id=6">View Details</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state hidden" id="listingEmpty">
+        <h3>No matching properties found</h3>
+        <p>Try changing your filters to discover more homes.</p>
+        <button class="btn btn-primary" type="button" id="emptyReset">Clear Filters</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="index.html"><span class="brand-icon">H</span> Home Nest</a>
+        <p>Thoughtful spaces. Better beginnings. Find a place that feels like home.</p>
+      </div>
+      <div><h3>Explore</h3><a href="index.html">Home</a><a href="properties.html">Properties</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div>
+      <div><h3>Your Account</h3><a href="login.html">Login</a><a href="signup.html">Sign Up</a><a href="dashboard.html">Dashboard</a><a href="bookings.html">My Bookings</a></div>
+      <div><h3>Get in Touch</h3><a href="mailto:hello@homenest.example">hello@homenest.example</a><p>Hyderabad, India</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear"></span> Home Nest. All rights reserved.</span><span>Made for finding your next home.</span></div>
+  </footer>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+</body>
+</html>

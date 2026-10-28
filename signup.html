@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Home Nest</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="auth-body">
+  <header class="site-header">
+    <a class="brand" href="dashboard.html" class="logo" aria-label="Home Nest dashboard">
+      <span class="brand-icon">H</span>
+      <span>Home Nest</span>
+    </a>
+    <a class="text-link" href="index.html">← Back to Home</a>
+  </header>
+
+  <main class="auth-layout">
+    <section class="auth-visual signup-visual">
+      <div class="auth-visual-overlay"></div>
+      <div class="auth-visual-content">
+        <span class="eyebrow eyebrow-light">MAKE YOURSELF AT HOME</span>
+        <h1>Every great story<br>needs a <em>place.</em></h1>
+        <p>Create an account to save the homes you love and keep track of your booking requests.</p>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-form-wrap">
+        <a class="brand auth-brand" href="index.html"><span class="brand-icon">H</span> Home Nest</a>
+        <span class="eyebrow">GET STARTED</span>
+        <h2>Create your account</h2>
+        <p class="muted-text">Join Home Nest and start exploring.</p>
+
+        <form id="signupForm" class="auth-form">
+          <div class="form-group">
+            <label for="signupName">Full name</label>
+            <input id="signupName" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required minlength="2">
+          </div>
+
+          <div class="form-group">
+            <label for="signupEmail">Email address</label>
+            <input id="signupEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required>
+          </div>
+
+          <div class="form-group">
+            <label for="signupConfirm">Confirm password</label>
+            <input id="signupConfirm" name="confirmPassword" type="password" placeholder="Enter password again" autocomplete="new-password" minlength="6" required>
+          </div>
+
+          <label class="checkbox-row">
+            <input id="signupTerms" type="checkbox" required>
+            <span>I understand this is a frontend demo account.</span>
+          </label>
+
+          <button class="btn btn-primary btn-block" type="submit">Create Account →</button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+        <p class="form-note">This demonstration stores account data in your browser only. It is not secure authentication.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="auth-footer">© <span id="currentYear"></span> Home Nest. All rights reserved.</footer>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+</body>
+</html>
